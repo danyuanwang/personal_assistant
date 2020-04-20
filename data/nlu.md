@@ -54,3 +54,11 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
+## intent:ask
+- how many people are infected?
+- how many people have died?
+- what are the symptoms?
+- what should I do to help?
+- what is the chance of death?
+ 
