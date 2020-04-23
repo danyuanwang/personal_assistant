@@ -7,7 +7,31 @@ intents:
   - mood_unhappy
   - bot_challenge
   - ask
+  - ask_disease_data:
+      use_entities: []
 
+entities:
+  - disease
+  - date
+  - location
+  - treatment
+
+slots:
+  disease:
+    type: unfeaturized
+    auto_fill: true 
+  date:
+    type: unfeaturized
+    auto_fill: true
+  location:
+    type: unfeaturized
+    auto_fill: true
+  treatment: 
+    type: unfeaturized
+    auto_fill: true
+
+
+ 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
@@ -28,8 +52,27 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
   
-  utter_ask:
-  - text: "could, you please tell me more?"
+  utter_ask_disease:
+  - text: "what kind of disease?"
+
+  utter_ask_date:
+  - text: "what date?"
+  
+  utter_ask_location:
+  - text: "which state?"
+  
+  utter_ask_treatment:
+  - text: "what treatment?"
+  
+  utter_report_number:
+  - text: "the total number is {number}"
+
+  utter_ask_disease_data:
+  - text: "could you please tell me more?"
+
+forms:
+  - ask_disease_data_form
+
 
 session_config:
   session_expiration_time: 60
