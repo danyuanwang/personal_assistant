@@ -35,5 +35,5 @@
  - ask_disease_data_form
  - form{"name": "ask_disease_data_form"}
  - form{"name": null}
- - utter_report_number
+ - utter_report_amount
 

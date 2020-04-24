@@ -12,15 +12,23 @@ intents:
 
 entities:
   - disease
+  - time
   - date
   - location
   - treatment
+  - ORG
+  - LOC
+  - GPE
+  - DATE
+  - TIME
+  - distance
+  - number
 
 slots:
   disease:
     type: unfeaturized
     auto_fill: true 
-  date:
+  time:
     type: unfeaturized
     auto_fill: true
   location:
@@ -29,7 +37,7 @@ slots:
   treatment: 
     type: unfeaturized
     auto_fill: true
-  number:
+  amount:
     type: unfeaturized
     auto_fill: false
 
@@ -66,8 +74,8 @@ responses:
   utter_ask_treatment:
   - text: "what treatment?"
   
-  utter_report_number:
-  - text: "the total number is {number}"
+  utter_report_amount:
+  - text: "the total amount is {amount}"
 
   utter_ask_disease_data:
   - text: "could you please tell me more?"

@@ -80,6 +80,6 @@ class AskDiseaseDataForm(FormAction):
         """Define what the form has to do after all required slots are filled"""
 
         # utter submit template
-        dispatcher.utter_message(template="uutter_report_number")
-        return [SlotSet("number", 10)]
+        dispatcher.utter_message(template="uutter_report_amount")
+        return [SlotSet("amount", 10)]
 

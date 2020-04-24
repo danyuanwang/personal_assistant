@@ -4,7 +4,9 @@ language: en
 pipeline:
   - name: "SpacyNLP"
   # language model to load
-    model: "en_core_web_md"
+  #  model: "en_core_web_sm"
+  #  model: "en_core_web_md"
+    model: "en_core_web_lg"
 
   # when retrieving word vectors, this will decide if the casing
   # of the word is relevant. E.g. `hello` and `Hello` will
@@ -80,7 +82,7 @@ pipeline:
   
   - name: "SpacyEntityExtractor"
   # dimensions to extract
-    dimensions: ["PERSON", "LOC", "ORG", "PRODUCT"]
+    dimensions: ["PERSON", "NORP","LOC", "ORG", "PRODUCT","EVENT","WORK OF ART","LANGUAGE","DATE","TIME","PERCENT","MONEY","QUANTITY","ORDINAL","CARDINAL","GPE"]
   - name: "CRFEntityExtractor"
   # BILOU_flag determines whether to use BILOU tagging or not.
     BILOU_flag: True
@@ -110,20 +112,20 @@ pipeline:
     L2_c: 0.1
 
 
-  #- name: "DucklingHTTPExtractor"
+  - name: "DucklingHTTPExtractor"
   # url of the running duckling server
-  #  url: "http://duckling:8000"
+    url: "http://0.0.0.0:8000"
   # dimensions to extract
-  #  dimensions: ["time", "number", "amount-of-money", "distance"]
+    dimensions: ["time", "number", "amount-of-money", "distance"]
   # allows you to configure the locale, by default the language is
   # used
-  #  locale: "en_US"
+    locale: "en_US"
   # if not set the default timezone of Duckling is going to be used
   # needed to calculate dates from relative expressions like "tomorrow"
-  #  timezone: "US/Pacific"
+    timezone: "US/Pacific"
   # Timeout for receiving response from http url of the running duckling server
   # if not set the default timeout of duckling http url is set to 3 seconds.
-  #  timeout : 3
+    timeout : 3
 
   - name: EntitySynonymMapper
 
