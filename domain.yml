@@ -29,7 +29,9 @@ slots:
   treatment: 
     type: unfeaturized
     auto_fill: true
-
+  number:
+    type: unfeaturized
+    auto_fill: false
 
  
 responses:

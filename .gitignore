@@ -2,3 +2,4 @@ venv*/
 models/
 *.swp
 *.swo
+__pycache__/

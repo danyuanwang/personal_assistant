@@ -31,13 +31,11 @@ from typing import Dict, Text, Any, List, Union, Optional
 from rasa_sdk import Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
-
+from rasa_sdk.events import SlotSet
 
 class AskDiseaseDataForm(FormAction):
-
     def name(self) -> Text:
         """Unique identifier of the form"""
-
         return "ask_disease_data_form" 
 
     @staticmethod
@@ -77,5 +75,11 @@ class AskDiseaseDataForm(FormAction):
 #    @staticmethod
 #    def cuisine_db() -> List[Text]:
 #        """Database of supported cuisines"""
-                                                                                                                                                               8,1           Top
+    def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
+            ) -> List[Dict]:
+        """Define what the form has to do after all required slots are filled"""
+
+        # utter submit template
+        dispatcher.utter_message(template="uutter_report_number")
+        return [SlotSet("number", 10)]
 
