@@ -101,6 +101,8 @@ pipeline:
       "title",
       "digit",
       "pattern",
+      "pos",
+      "pos2",
     ],
     ["low", "title", "upper"],
     ]

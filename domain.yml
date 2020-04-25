@@ -23,6 +23,13 @@ entities:
   - TIME
   - distance
   - number
+  - country
+  - state
+  - area
+  - province
+  - city
+  - town
+  - county
 
 slots:
   disease:
@@ -40,7 +47,27 @@ slots:
   amount:
     type: unfeaturized
     auto_fill: false
-
+  country:
+    type: unfeaturized
+    auto_fill: true
+  state:
+    type: unfeaturized
+    auto_fill: true
+  area:
+    type: unfeaturized
+    auto_fill: true
+  province:
+    type: unfeaturized
+    auto_fill: true
+  city:
+    type: unfeaturized
+    auto_fill: true
+  town:
+    type: unfeaturized
+    auto_fill: true
+  county:
+    type: unfeaturized
+    auto_fill: true
  
 responses:
   utter_greet:

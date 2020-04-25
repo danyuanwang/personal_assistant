@@ -56,11 +56,12 @@
 - am I talking to a human?
 
 ## intent:ask_disease_data
-- how many people are [infected](treatment) due to [covid-19](disease)?
-- how many people are [tested](treatment) due to [covid](disease)?
-- how many people have [died](treatment)?
-- how many people are [recovered](treatment) due to [coronavirus](disease)?
+- how many people are [infected](treatment) due to [covid-19](disease) in [NYC](city) [New Yor]k(state)?
+- how many people are [tested](treatment) due to [covid](disease) in [China](country)?
+- how many people have [died](treatment) in [Seattle](city) [WA](state) [USA](country)?
+- how many people are [recovered](treatment) due to [coronavirus](disease) in [New York City](city:NYC)?
 - what are the symptoms?
 - what should I do to help?
 - what is the chance of death?
+
  
