@@ -45,31 +45,31 @@ class AskDiseaseDataForm(FormAction):
         return ["disease",  "treatment"]
 
 
-    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-        """A dictionary to map required slots to
-            - an extracted entity
-            - intent: value pairs
-            - a whole message
-            or a list of them, where a first match will be picked"""
-
-        return {
-            "cuisine": self.from_entity(entity="cuisine", not_intent="chitchat"),
-            "num_people": [
-                self.from_entity(
-                    entity="number", intent=["inform", "request_restaurant"]
-                ),
-            ],
-            "outdoor_seating": [
-                self.from_entity(entity="seating"),
-                self.from_intent(intent="affirm", value=True),
-                self.from_intent(intent="deny", value=False),
-            ],
-            "preferences": [
-                self.from_intent(intent="deny", value="no additional preferences"),
-                self.from_text(not_intent="affirm"),
-            ],
-            "feedback": [self.from_entity(entity="feedback"), self.from_text()],
-        }
+#    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+#        """A dictionary to map required slots to
+#            - an extracted entity
+#            - intent: value pairs
+#            - a whole message
+#            or a list of them, where a first match will be picked"""
+#
+#        return {
+#            "cuisine": self.from_entity(entity="cuisine", not_intent="chitchat"),
+#            "num_people": [
+#                self.from_entity(
+#                    entity="number", intent=["inform", "request_restaurant"]
+#                ),
+#            ],
+#            "outdoor_seating": [
+#                self.from_entity(entity="seating"),
+#                self.from_intent(intent="affirm", value=True),
+#                self.from_intent(intent="deny", value=False),
+#            ],
+#            "preferences": [
+#                self.from_intent(intent="deny", value="no additional preferences"),
+#                self.from_text(not_intent="affirm"),
+#            ],
+#            "feedback": [self.from_entity(entity="feedback"), self.from_text()],
+#        }
 
    # USED FOR DOCS: do not rename without updating in docs
     @staticmethod

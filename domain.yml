@@ -103,6 +103,8 @@ responses:
   
   utter_report_amount:
   - text: "the total amount is {amount}"
+  - text: "it is {amount}"
+  - text: "so far, it has reached {amount}"
 
   utter_ask_disease_data:
   - text: "could you please tell me more?"
