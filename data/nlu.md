@@ -65,4 +65,5 @@
 - what should I do to help?
 - what is the chance of death?
 
- 
+## lookup:state
+data/states.txt 

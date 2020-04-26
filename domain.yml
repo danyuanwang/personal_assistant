@@ -14,7 +14,6 @@ entities:
   - disease
   - time
   - date
-  - location
   - treatment
   - ORG
   - LOC
@@ -32,6 +31,9 @@ entities:
   - county
 
 slots:
+  GPE:
+    type: unfeaturized
+    auto_fill: true
   disease:
     type: unfeaturized
     auto_fill: true 
@@ -40,7 +42,7 @@ slots:
     auto_fill: true
   location:
     type: unfeaturized
-    auto_fill: true
+    auto_fill: false
   treatment: 
     type: unfeaturized
     auto_fill: true
@@ -96,7 +98,9 @@ responses:
   - text: "what date?"
   
   utter_ask_location:
-  - text: "which state?"
+  - text: "which location?"
+  utter_ask_GPE:
+  - text: "which counry, state or city?"
   
   utter_ask_treatment:
   - text: "what treatment?"

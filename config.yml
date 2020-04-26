@@ -2,7 +2,7 @@
 # https://rasa.com/docs/rasa/nlu/components/
 language: en
 pipeline:
-  - name: "SpacyNLP"
+  - name: SpacyNLP
   # language model to load
   #  model: "en_core_web_sm"
   #  model: "en_core_web_md"
@@ -34,7 +34,7 @@ pipeline:
   # Text will be tokenized with case sensitive as default
   #  case_sensitive: True  
 
-  - name: "SpacyTokenizer"
+  - name: SpacyTokenizer
   # Flag to check whether to split intents
     intent_tokenization_flag: False
   # Symbol on which intent should be split
@@ -53,17 +53,16 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   
-  - name: "SpacyFeaturizer"
+  - name: SpacyFeaturizer
   # Specify what pooling operation should be used to calculate the vector of
   # the __CLS__ token. Available options: 'mean' and 'max'.
     pooling: "mean"
 
   # - name: "LanguageModelFeaturizer"
-  - name: "RegexFeaturizer"
   - name: DIETClassifier
     epochs: 100
 
-  - name: "SklearnIntentClassifier"
+  - name: SklearnIntentClassifier
   # Specifies the list of regularization values to
   # cross-validate over for C-SVM.
   # This is used with the ``kernel`` hyperparameter in GridSearchCV.
@@ -80,10 +79,11 @@ pipeline:
   # This can be a name or a function.
     scoring_function: "f1_weighted"
   
-  - name: "SpacyEntityExtractor"
+  - name: SpacyEntityExtractor
   # dimensions to extract
     dimensions: ["PERSON", "NORP","LOC", "ORG", "PRODUCT","EVENT","WORK OF ART","LANGUAGE","DATE","TIME","PERCENT","MONEY","QUANTITY","ORDINAL","CARDINAL","GPE"]
-  - name: "CRFEntityExtractor"
+
+  - name: CRFEntityExtractor
   # BILOU_flag determines whether to use BILOU tagging or not.
     BILOU_flag: True
   # features to extract in the sliding window
@@ -114,7 +114,7 @@ pipeline:
     L2_c: 0.1
 
 
-  - name: "DucklingHTTPExtractor"
+  - name: DucklingHTTPExtractor
   # url of the running duckling server
     url: "http://0.0.0.0:8000"
   # dimensions to extract
