@@ -5,8 +5,8 @@ pipeline:
   - name: SpacyNLP
   # language model to load
   #  model: "en_core_web_sm"
-  #  model: "en_core_web_md"
-    model: "en_core_web_lg"
+    model: "en_core_web_md"
+  #  model: "en_core_web_lg"
 
   # when retrieving word vectors, this will decide if the casing
   # of the word is relevant. E.g. `hello` and `Hello` will
