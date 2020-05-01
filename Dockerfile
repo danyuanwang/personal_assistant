@@ -10,9 +10,6 @@ WORKDIR /app
 # Change back to root user to install dependencies
 USER root
 
-RUN python -m spacy download en_core_web_md
-RUN python -m spacy link en_core_web_md en
-
 COPY config.yml config.yml
 COPY domain.yml domain.yml
 COPY endpoints.yml endpoints.yml
