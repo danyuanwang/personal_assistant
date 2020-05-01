@@ -9,12 +9,20 @@ services:
      depends_on:
        - duckling
        - action
+     networks:
+       - overlay
   action:
      image: danyuanwang/xuanwugame:action
      expose: 
        - "5055"
+     networks:
+       - overlay
   duckling:
      image: rasa/duckling
-     port: 
-       - 5008:5008
-
+     ports: 
+       - 8000:8000
+     networks:
+       - overlay
+networks:
+  overlay:
+    driver: bridge

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo docker run -d -p 5008:5008 rasa/duckling --name duckling-server
+sudo docker run -d -p 8000:8000 rasa/duckling 
