@@ -3,3 +3,4 @@ models/
 *.swp
 *.swo
 __pycache__/
+tmp/

@@ -10,10 +10,10 @@ WORKDIR /app
 # Change back to root user to install dependencies
 USER root
 
-COPY config.yml config.yml
-COPY domain.yml domain.yml
-COPY endpoints.yml endpoints.yml
-COPY credentials.yml credentials.yml
+COPY docker/config.yml config.yml
+COPY docker/domain.yml domain.yml
+COPY docker/endpoints.yml endpoints.yml
+COPY docker/credentials.yml credentials.yml
 
 # Create /.cache for spacy model training.
 RUN mkdir /.cache && chmod a+rwx /.cache 
