@@ -1,0 +1,24 @@
+version: '3.0'
+services:
+  rasa:
+    image: danyuanwang/xuanwugame:assistant
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+    command:
+      - run
+      - --model
+      - /app/models
+    depends_on:
+      - duckling
+      - action
+  action:
+    image: danyuanwang/xuanwugame:action
+    expose: 
+      - "5055"
+  duckling:
+    image: rasa/duckling
+    expose: 
+      - "8000"
+

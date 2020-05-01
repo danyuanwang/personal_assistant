@@ -116,7 +116,7 @@ pipeline:
 
   - name: DucklingHTTPExtractor
   # url of the running duckling server
-    url: "http://0.0.0.0:8000"
+    url: "http://duckling:8000"
   # dimensions to extract
     dimensions: ["time", "number", "amount-of-money", "distance"]
   # allows you to configure the locale, by default the language is
