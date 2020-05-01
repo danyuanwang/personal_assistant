@@ -7,7 +7,7 @@ cp config.yml docker/
 cp endpoints.yml docker/
 cp domain.yml docker/
 cp credentials.yml docker/
-sed -i 's/localhost:8000/duckling:8000/g' docker/config.yml
+sed -i 's/localhost:5008/duckling:5008/g' docker/config.yml
 sed -i 's/localhost:5055/action:5055/g' docker/endpoints.yml
 rm models/*
 rasa train -c docker/config.yml -vv --debug
