@@ -1,0 +1,9 @@
+version: '3.0'
+services:
+  rasa:
+     restart: always
+  action:
+     restart: always
+  duckling:
+     restart: always
+
