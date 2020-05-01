@@ -4,12 +4,8 @@ services:
     image: danyuanwang/xuanwugame:assistant
     ports:
       - 5005:5005
-    volumes:
-      - ./:/app
     command:
       - run
-      - --model
-      - /app/models
     depends_on:
       - duckling
       - action
@@ -21,4 +17,3 @@ services:
     image: rasa/duckling
     expose: 
       - "8000"
-
