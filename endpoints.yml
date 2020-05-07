@@ -37,7 +37,7 @@ tracker_store:
      url: "localhost" # tracker database url
      port: "5432"
      db: "personal_assistant_db"  # path to your db
-     username:  wwwadmin # username used for authentication
+     username:  personal_assistant_db_admin # username used for authentication
      password:  covidhub@io # password used for authentication
 
 # Event broker which all conversation events should be streamed to.
@@ -47,7 +47,7 @@ event_broker:
   url: localhost
   port: 5432
   dialect: postgresql
-  username: wwwadmin
+  username: personal_assistant_db_admin
   password: covidhub@io
   db: personal_assistant_db
 

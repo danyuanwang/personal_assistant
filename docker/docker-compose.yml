@@ -30,7 +30,7 @@ services:
        - 5433:5432
      environment:
        - POSTGRES_PASSWORD=covidhub@io
-       - POSTGRES_USER=wwwadmin
+       - POSTGRES_USER=personal_assistant_db_admin
        - POSTGRES_DB=personal_assistant_db
 
      networks:
