@@ -9,6 +9,7 @@ services:
      depends_on:
        - duckling
        - action
+       - postgres
      networks:
        - overlay
   action:
@@ -21,6 +22,17 @@ services:
      image: rasa/duckling
      ports: 
        - 8000:8000
+     networks:
+       - overlay
+  postgres:
+     image: postgres:latest
+     ports:
+       - 5433:5432
+     environment:
+       - POSTGRES_PASSWORD=covidhub@io
+       - POSTGRES_USER=wwwadmin
+       - POSTGRES_DB=personal_assistant_db
+
      networks:
        - overlay
 networks:

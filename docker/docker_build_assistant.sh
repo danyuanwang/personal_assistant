@@ -9,6 +9,9 @@ cp domain.yml docker/
 cp credentials.yml docker/
 sed -i 's/localhost:8000/duckling:8000/g' docker/config.yml
 sed -i 's/localhost:5055/action:5055/g' docker/endpoints.yml
+sed -i 's/url: "localhost" # tracker database url/url: "postgres" # tracker database url/g' docker/endpoints.yml
+sed -i 's/url: localhost/url: postgres/g' docker/endpoints.yml
+
 rm models/*
 rasa train -c docker/config.yml -vv --debug
 sudo docker build -f docker/Dockerfile_assistant . -t danyuanwang/xuanwugame:assistant
@@ -17,3 +20,4 @@ rm docker/config.yml
 rm docker/endpoints.yml
 rm docker/domain.yml
 rm docker/credentials.yml
+popd

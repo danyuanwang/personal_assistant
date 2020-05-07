@@ -31,9 +31,25 @@ action_endpoint:
 #    db: <name of the db within your mongo instance, e.g. rasa>
 #    username: <username used for authentication>
 #    password: <password used for authentication>
+tracker_store:
+     type: SQL
+     dialect: "postgresql"  # the dialect used to interact with the db
+     url: "localhost" # tracker database url
+     port: "5432"
+     db: "personal_assistant_db"  # path to your db
+     username:  wwwadmin # username used for authentication
+     password:  covidhub@io # password used for authentication
 
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/api/event-brokers/
+event_broker:
+  type: SQL
+  url: localhost
+  port: 5432
+  dialect: postgresql
+  username: wwwadmin
+  password: covidhub@io
+  db: personal_assistant_db
 
 #event_broker:
 #  url: localhost
