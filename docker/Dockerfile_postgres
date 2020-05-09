@@ -1,0 +1,6 @@
+# Extend the postgress image
+FROM postgres:latest
+
+COPY docker/init_postgres.sql /docker-entrypoint-initdb.d/
+
+
