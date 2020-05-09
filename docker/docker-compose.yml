@@ -25,13 +25,12 @@ services:
      networks:
        - overlay
   postgres:
-     image: postgres:latest
+     image: danyuanwang/xuanwugame:postgres
      ports:
        - 5433:5432
      environment:
        - POSTGRES_PASSWORD=covidhub@io
-       - POSTGRES_USER=personal_assistant_db_admin
-       - POSTGRES_DB=personal_assistant_db
+       - POSTGRES_USER=postgres_db_admin
 
      networks:
        - overlay

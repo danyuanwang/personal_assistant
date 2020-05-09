@@ -36,7 +36,7 @@ tracker_store:
      dialect: "postgresql"  # the dialect used to interact with the db
      url: "localhost" # tracker database url
      port: "5432"
-     db: "personal_assistant_db"  # path to your db
+     db: "tracker_store_db"  # path to your db
      username:  personal_assistant_db_admin # username used for authentication
      password:  covidhub@io # password used for authentication
 
@@ -49,7 +49,7 @@ event_broker:
   dialect: postgresql
   username: personal_assistant_db_admin
   password: covidhub@io
-  db: personal_assistant_db
+  db: event_broker_db
 
 #event_broker:
 #  url: localhost
