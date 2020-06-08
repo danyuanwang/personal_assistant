@@ -48,7 +48,6 @@ while(True):
 
     for token in doc:
        print(token_print_format.format(token.text, token.has_vector, token.vector_norm, token.is_oov))
-    while
     for token1 in doc:
         for token2 in doc:
             if(token2.has_vector and token1.has_vector):
