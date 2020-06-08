@@ -4,5 +4,4 @@ models/
 *.swo
 __pycache__/
 tmp/
-/actions/
 
